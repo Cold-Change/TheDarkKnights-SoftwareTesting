@@ -115,22 +115,6 @@ Comprehensive test suite for MRTD.py with **80 unit and integration tests** cove
     - Descriptive length errors
     - Invalid character errors
 
-## Running the Tests
-
-Run the complete test suite:
-```bash
-python -m unittest MRTDtest -v
-```
-
-Run specific test class:
-```bash
-python -m unittest MRTDtest.TestDecodeMrz -v
-```
-
-Run specific test:
-```bash
-python -m unittest MRTDtest.TestDecodeMrz.test_decode_valid_mrz -v
-```
 
 ## Test Results
 

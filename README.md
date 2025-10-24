@@ -115,11 +115,95 @@ Comprehensive test suite for MRTD.py with **80 unit and integration tests** cove
     - Descriptive length errors
     - Invalid character errors
 
+## Requirements
+
+- Python 3.x
+- Coverage package (for code coverage analysis)
+
+## Setup Instructions
+
+### 1. Activate Conda Environment
+```powershell
+conda activate your-env-name
+```
+
+### 2. Install Dependencies
+```powershell
+pip install -r requirements.txt
+```
+
+Or install coverage directly:
+```powershell
+pip install coverage
+```
+
+## Running the Tests
+
+### Basic Test Execution
+
+Run the complete test suite:
+```bash
+python -m unittest MRTDtest -v
+```
+
+Run specific test class:
+```bash
+python -m unittest MRTDtest.TestDecodeMrz -v
+```
+
+Run specific test:
+```bash
+python -m unittest MRTDtest.TestDecodeMrz.test_decode_valid_mrz -v
+```
+
+### Running with Coverage
+
+**PowerShell commands (for Windows/VS Code):**
+
+Run tests with coverage:
+```powershell
+python -m coverage run -m unittest MRTDtest
+```
+
+View coverage report:
+```powershell
+python -m coverage report
+```
+
+View detailed coverage with line numbers:
+```powershell
+python -m coverage report -m
+```
+
+Generate HTML coverage report:
+```powershell
+python -m coverage html
+```
+
+Open HTML report in browser:
+```powershell
+start htmlcov\index.html
+```
+
+**Quick one-liner (PowerShell):**
+```powershell
+python -m coverage run -m unittest MRTDtest; python -m coverage report -m
+```
+
+**Or use the provided script:**
+```powershell
+.\run_coverage.ps1
+```
 
 ## Test Results
 
 **Total Tests: 80**
 **Status: All Passing ✓**
+
+**Coverage Results:**
+- **MRTD.py:** 87% coverage (194 statements)
+- **MRTDtest.py:** 99% coverage (445 statements)
+- **Overall:** 95% coverage
 
 The test suite provides comprehensive coverage of:
 - ✅ All public functions
